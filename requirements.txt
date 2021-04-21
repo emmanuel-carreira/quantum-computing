@@ -1,0 +1,4 @@
+qiskit
+pennylane
+PennyLane-qiskit
+tensorflow

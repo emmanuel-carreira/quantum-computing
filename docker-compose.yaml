@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  pennylane:
+    build: .
+    container_name: "pennylane"
+    volumes:
+      - .:/code
+      - ./notebooks:/opt/notebooks
+    ports:
+      - 8888:8888
+    command: "/opt/conda/bin/jupyter notebook --allow-root --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser"
